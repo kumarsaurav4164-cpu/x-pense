@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --cream-50: #fdfbf7;
+    --cream-100: #fbf6ec;
+    --cream-200: #f5ebd3;
+    --cream-300: #eedeb4;
+    --cream-400: #e4c77c;
+    --amul-blue: #0b3c8a;
+    --amul-red: #d9252a;
+    --amul-gold: #e5a93c;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  }
+
+  body {
+    background-color: #faf7f2;
+    color: #1f2937;
+    overflow-x: hidden;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #fbf6ec;
+}
+::-webkit-scrollbar-thumb {
+  background: #d4c5a9;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #b8a684;
+}
+
+/* Glassmorphism & custom utility accents */
+.cream-glass {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.cream-card-hover {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.cream-card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 25px -5px rgba(180, 83, 9, 0.08), 0 8px 10px -6px rgba(180, 83, 9, 0.05);
+}
